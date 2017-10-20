@@ -1,1 +1,10 @@
 <h1>Show post</h1>
+
+<h3><%= @post.title %></h3>
+
+<smal> <%= @post.created_at.strftime("%b %d. %Y") %> </smal>
+
+<p>
+  <%= @post.body %>
+</p>
+<%= link_to "Edit", edit_post_path %>
