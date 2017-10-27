@@ -1,19 +1,43 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Myrubyblog</title>
-    <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
+<%= render "partials/header" %>
   <body>
-    <% flash.each do |key,value| %>
-      <p>
-        <%= value %>
-      </p>
-    <% end %>
-    <%= yield %>
+    <div id="menu">
+      <ul class="main-nav">
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "About", about_path %></li>
+        <li><%= link_to "Blog", posts_path %></li>
+        <li><%= link_to "Contact", contact_path %></li>
+        <li><%= link_to "Resources", resources_path %></li>
+      </ul>
+    </div>
+    <div id="wrapper">
+  	<div id="header-wrapper">
+  		<div id="header">
+  			<div id="logo">
+  				<h1><a href="#">My Ruby Blog</a></h1>
+  				<p>Learning Ruby on Rails</p>
+  			</div>
+  		</div>
+  	</div>
+  	<!-- end #header -->
+  	<div id="page">
+  		<div id="page-bgtop">
+  			<div id="page-bgbtm">
+  				<div id="content">
+            <div id="Flash messages">
+              <% flash.each do |key,value| %>
+                <p>
+                  <%= value %>
+                </p>
+              <% end %>
+            </div>
+            <%= yield %>
+  					<div style="clear: both;">&nbsp;</div>
+  				</div>
+  				<!-- end #content -->
+  				<%= render "partials/sidebar" %>
+  				<div style="clear: both;">&nbsp;</div>
+  			</div>
+  		</div>
+	  </div>
   </body>
 </html>

@@ -1,11 +1,5 @@
 class HomeController < ApplicationController
   def index
-    ActiveRecord::Base.establish_connection(
-      :adapter  => "postgresql",
-      :host     => "localhost",
-      :username => "postgres",
-      :password => "vagrant",
-      :database => "myrubyblog"
-    )
+    @posts = Post.all
   end
 end
