@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+My Ruby blog app created by Kevin Garay.
 
-Things you may want to cover:
+* Ruby version -> ruby 2.4.1p111
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
+* Rails version -> 5.1.4
 
 * Deployment instructions
-
-* ...
+  - Clone the repository
+  - Execute the command rake db:migrate
+  - Execute the command rails s
+  - Go to http://localhost:3000
